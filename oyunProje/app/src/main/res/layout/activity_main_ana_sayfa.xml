@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FBFBFB"
+        tools:context=".MainAnaSayfa">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="410dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/tabDots"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabDots"
+            android:layout_width="160dp"
+            android:layout_height="19dp"
+
+            android:layout_alignParentBottom="true"
+
+
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#4F025C"
+
+            app:barrierMargin="20dp"
+            app:circularflow_radiusInDP="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/gameRecycler"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager"
+            app:tabBackground="@drawable/tab_indicator_select"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+
+        <Button
+            android:id="@+id/btnCikis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="293dp"
+            android:text="çıkış"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gameRecycler" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gameRecycler"
+            android:layout_width="410dp"
+            android:layout_height="360dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="44dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <SearchView
+            android:id="@+id/searchview"
+            android:layout_width="409dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/searchview_background"
+            android:backgroundTint="#4F025C"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@android:color/transparent"
+            android:queryHint="search..."
+            app:layout_constraintBottom_toTopOf="@+id/view_pager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="171dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="28dp"
+            android:text="Favoriler"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnCikis"
+            app:layout_constraintTop_toBottomOf="@+id/gameRecycler" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
